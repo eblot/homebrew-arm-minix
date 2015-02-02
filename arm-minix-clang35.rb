@@ -262,10 +262,13 @@ Index: lib/Driver/Tools.cpp
 diff --git a/tools/clang/lib/Driver/Tools.cpp b/tools/clang/lib/Driver/Tools.cpp
 --- a/tools/clang/lib/Driver/Tools.cpp	(revision 224697)
 +++ b/tools/clang/lib/Driver/Tools.cpp	(working copy)
-@@ -7526,6 +7526,25 @@
+@@ -7526,6 +7526,28 @@
    const Driver &D = getToolChain().getDriver();
    ArgStringList CmdArgs;
  
++  // Silence warning for "clang -g foo.o -o foo"
++  Args.ClaimAllArgs(options::OPT_g_Group);
++
 +  if (!D.SysRoot.empty())
 +    CmdArgs.push_back(Args.MakeArgString("--sysroot=" + D.SysRoot));
 +
@@ -288,7 +291,7 @@ diff --git a/tools/clang/lib/Driver/Tools.cpp b/tools/clang/lib/Driver/Tools.cpp
    if (Output.isFilename()) {
      CmdArgs.push_back("-o");
      CmdArgs.push_back(Output.getFilename());
-@@ -7535,39 +7554,58 @@
+@@ -7535,39 +7557,58 @@
  
    if (!Args.hasArg(options::OPT_nostdlib) &&
        !Args.hasArg(options::OPT_nostartfiles)) {
