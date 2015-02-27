@@ -1,6 +1,7 @@
 class MinixHostTools < Formula
   homepage "https://github.com/eblot/minix-host-tools"
   url "https://github.com/eblot/minix-host-tools.git", :branch => "master"
+  version '1.1'
 
   depends_on "cmake" => :build
 
