@@ -5,27 +5,27 @@ class ArmMinixClang35 <Formula
 
   stable do
     url 'http://llvm.org/releases/3.5.1/llvm-3.5.1.src.tar.xz'
-    sha1 '79638cf00584b08fd6eeb1e73ea69b331561e7f6'
+    sha256 'bf3275d2d7890015c8d8f5e6f4f882f8cf3bf51967297ebe74111d6d8b53be15'
 
     resource 'clang' do
       url 'http://llvm.org/releases/3.5.1/cfe-3.5.1.src.tar.xz'
-      sha1 '39d79c0b40cec548a602dcac3adfc594b18149fe'
+      sha256 '6773f3f9cf815631cc7e779ec134ddd228dc8e9a250e1ea3a910610c59eb8f5c'
     end
 
     resource 'clang-tools-extra' do
       url 'http://llvm.org/releases/3.5.1/clang-tools-extra-3.5.1.src.tar.xz'
-      sha1 '7a0dd880d7d8fe48bdf0f841eca318337d27a345'
+      sha256 'e8d011250389cfc36eb51557ca25ae66ab08173e8d53536a0747356105d72906'
     end
   end
 
   resource 'isl' do
     url 'http://isl.gforge.inria.fr/isl-0.13.tar.bz2'
-    sha1 '3904274c84fb3068e4f59b6a6b0fe29e7a2b7010'
+    sha256 '7265fd897b7f9147fde76560f28ed18f2c20e5f5da7f4bd9d0e01f8a713401f1'
   end
 
   resource 'cloog' do
     url 'http://repo.or.cz/w/cloog.git/snapshot/22643c94eba7b010ae4401c347289f4f52b9cd2b.tar.gz'
-    sha1 '5409629e2fbe38035e8071c81601317a1a699309'
+    sha256 '38888920c991b056f4e7d539853a4cbc328fe738ff6275610aa6b2f711ba9e6d'
   end
 
   # required to build cloog
